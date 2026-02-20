@@ -1,0 +1,64 @@
+/* Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-main);
+    font-size: var(--fs-base);
+    color: var(--color-text);
+    background-color: gainsboro;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-family: inherit;
+}
+
+/* Container */
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: var(--container-padding);
+}
+
+/* Section */
+section {
+    padding: var(--section-padding);
+}
+
+/* Section title */
+.section-title {
+    font-family: var(--font-accent);
+    font-size: var(--fs-xl);
+    color: var(--color-dark);
+    margin-bottom: 40px;
+    text-align: center;
+}
