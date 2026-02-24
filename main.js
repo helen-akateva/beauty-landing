@@ -1,3 +1,4 @@
+import 'modern-normalize';
 import './src/styles/main.css';
 
 // Імпорт HTML секцій як рядків (Vite ?raw)

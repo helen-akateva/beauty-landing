@@ -1,5 +1,7 @@
+@import './variables.css';
 @import './base.css';
+@import './layout.css';
 
 /* Sections */
-
+@import '../sections/header/header.css';
 @import '../sections/hero/hero.css';
