@@ -1,16 +1,20 @@
 :root {
   /* Colors */
---color-bg-main: #e6ecef;
-  --color-bg-section: #f4f7f9;
+
+  --color-bg-main: #f4f6f7;
+  --color-bg-section: #f9fbfc;
   --color-white: #ffffff;
-  --color-primary: #aebfc4;
-  --color-primary-hover: #8fa3aa;
-  --color-primary-soft: #d7e1e5;
-  --color-text-main: #2f3437;
-  --color-text-secondary: #5c6468;
-  --color-text-light: #8c959a;
-  --color-accent-blue: #2f4a63;
-  --color-accent-gold: #c7a65a;
+  --color-primary: #85a7b1;
+  --color-primary-hover: #6a8b94;
+  --color-primary-soft: #e2ebed;
+  --color-text-main: #232628;
+  --color-text-secondary: #4a5054;
+  --color-text-light: #8e969a;
+  --color-accent-blue: #4f6b75;
+  --color-header-bg: #1d2b36;
+  --color-header-link: #f4f6f7;
+  --color-accent-gold: #b3985d;
+  --color-accent-gold-hover: #9c824c;
 
   /* Typography */
   --font-main: 'Montserrat', sans-serif;
