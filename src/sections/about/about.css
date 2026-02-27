@@ -1,0 +1,160 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.wrap-photo {
+  order: 2;
+  width: 100%;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  height: 420px;
+}
+
+.img-about {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform var(--transition);
+}
+
+.wrap-photo:hover .img-about {
+  transform: scale(1.03);
+}
+
+.content-about {
+  order: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.slogan-about {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-accent-gold);
+  text-align: center;
+}
+
+.title-about {
+  font-family: var(--font-accent);
+  font-size: var(--fs-xl);
+  font-weight: 400;
+  color: var(--color-text-main);
+  margin-top: 4px;
+  text-align: center;
+}
+
+.text-bio {
+  font-size: var(--fs-sm);
+  line-height: 1.75;
+  color: var(--color-text-secondary);
+}
+
+.text-bio strong {
+  font-weight: 600;
+  color: var(--color-text-main);
+}
+
+.subtitle {
+  font-family: var(--font-accent);
+  font-size: var(--fs-lg);
+  font-weight: 500;
+  color: var(--color-text-main);
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--color-accent-gold);
+  margin-top: var(--space-xs);
+}
+
+.trust-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.trust-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: var(--fs-sm);
+  line-height: 1.55;
+  color: var(--color-text-secondary);
+  padding: 12px 0;
+  border-bottom: 1px solid var(--color-accent-gold);
+}
+
+.trust-item:last-child {
+  border-bottom: none;
+}
+
+.icon {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--color-accent-gold);
+  stroke: var(--color-accent-gold);
+  fill: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .about {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .wrap-photo {
+    order: 2;
+    height: 500px;
+  }
+
+  .content-about {
+    order: 1;
+  }
+
+  .title-about {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .about {
+    display: grid;
+    grid-template-columns: 48% 1fr;
+    gap: var(--space-lg);
+    align-items: stretch;
+  }
+
+  .wrap-photo {
+    order: 1;
+    height: 100%;
+  }
+
+  .img-about {
+    height: 100%;
+    min-height: 680px;
+  }
+
+  .content-about {
+    order: 2;
+    justify-content: center;
+  }
+
+  .slogan-about {
+    text-align: left;
+  }
+
+  .title-about {
+    font-size: 56px;
+    text-align: left;
+  }
+
+  .text-bio {
+    font-size: var(--fs-base);
+  }
+
+  .trust-item {
+    font-size: var(--fs-base);
+  }
+}

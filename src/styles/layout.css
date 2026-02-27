@@ -9,7 +9,7 @@
 
 .section {
     padding: var(--space-xl) 0;
-    scroll-margin-top: 100px;
+    scroll-margin-top: 64px;
 }
 
 

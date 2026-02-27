@@ -1,10 +1,11 @@
 :root {
   /* Colors */
 
-  --color-bg-main: #f4f6f7;
-  --color-bg-section: #f9fbfc;
-  --color-white: #ffffff;
+  --color-bg-main: #d4dde0;
+  --color-bg-section: #d4dde0;
+  --color-white: #f7f9fa;
   --color-primary: #85a7b1;
+  --color-bg-card: #e0e6e9;
   --color-primary-hover: #6a8b94;
   --color-primary-soft: #e2ebed;
   --color-text-main: #232628;
@@ -43,6 +44,6 @@
   --space-xs: 12px;
   --space-sm: 16px;
   --space-md: 32px;
-  --space-lg: 64px;
-  --space-xl: 80px;
+  --space-lg: 48px;
+  --space-xl: 64px;
 }
