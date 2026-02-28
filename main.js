@@ -1,14 +1,15 @@
 import 'modern-normalize';
 import './src/styles/main.css';
 
-// Імпорт HTML секцій як рядків (Vite ?raw)
-import headerHTML from './src/sections/header/header.html?raw';
-import heroHTML from './src/sections/hero/hero.html?raw';
-import servicesHTML from './src/sections/services/services.html?raw';
-import aboutHTML from './src/sections/about/about.html?raw';
+import { renderHeader, initHeader } from './src/sections/header/header.js';
+import { renderHero } from './src/sections/hero/hero.js';
+import { renderServices } from './src/sections/services/services.js';
+import { renderAbout } from './src/sections/about/about.js';
 
 // Вставка секцій в DOM
-document.querySelector('#header').innerHTML = headerHTML;
-document.querySelector('#hero').innerHTML = heroHTML;
-document.querySelector('#services').innerHTML = servicesHTML;
-document.querySelector('#about').innerHTML = aboutHTML;
+document.querySelector('#header').innerHTML = renderHeader();
+document.querySelector('#hero').innerHTML = renderHero();
+document.querySelector('#services').innerHTML = renderServices();
+document.querySelector('#about').innerHTML = renderAbout();
+
+initHeader();

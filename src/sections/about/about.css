@@ -118,7 +118,7 @@
   }
 }
 
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1280px) {
   .about {
     display: grid;
     grid-template-columns: 48% 1fr;
