@@ -1,5 +1,3 @@
-// src/sections/header/header.js
-
 export function renderHeader() {
   return `
     <div class="container header-container">
@@ -32,46 +30,65 @@ export function renderHeader() {
             <use href="icons.svg#icon-menu"></use>
           </svg>
         </button>
-        <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
-            <button class="mobile-menu-close" aria-label="Закрити меню">
-            <svg class="mobile-menu-icon" width="24" height="24">
-            <use href="icons.svg#icon-x-close"></use>
-            </svg>
-            </button>
-    <nav class="nav-mb">
-        <a href="./index.html" class="logo logo-nav-mb">Оксана Лихацька</a>
+      </nav>
 
-        <ul class="list-nav-mb">
-          <li class="item-nav-mb">
-            <a href="#services" class="link-nav-mb">Послуги</a>
-          </li>
-          <li class="item-nav-mb">
-            <a href="#about" class="link-nav-mb">Про мене</a>
-          </li>
-          <li class="item-nav-mb">
-            <a href="" class="link-nav-mb">Навчання для себе</a>
-          </li>
-          <li class="item-nav-mb">
-            <a href="" class="link-nav-mb">Стати майстром</a>
-          </li>
-          <li class="item-nav-mb">
-            <a href="" class="link-nav-mb">Майстрам</a>
-          </li>
-          <li class="item-nav-mb">
-            <a href="" class="link-nav-mb">Контакти</a>
-          </li>
-        </ul>
+      <div class="mobile-menu" aria-hidden="true">
+        <button class="mobile-menu-close" aria-label="Закрити меню">
+          <svg class="mobile-menu-icon" width="24" height="24">
+            <use href="icons.svg#icon-x-close"></use>
+          </svg>
+        </button>
+        <nav class="nav-mb">
+         <a href="./index.html" class="logo logo-nav-mb">Оксана Лихацька</a>
+          <ul class="list-navmb">
+            <li class="item-navmb">
+              <a href="#services" class="link-navmb">Послуги</a>
+            </li>
+            <li class="item-navmb">
+              <a href="#about" class="link-navmb">Про мене</a>
+            </li>
+            <li class="item-navmb">
+              <a href="" class="link-navmb">Навчання для себе</a>
+            </li>
+            <li class="item-navmb">
+              <a href="" class="link-navmb">Стати майстром</a>
+            </li>
+            <li class="item-navmb">
+              <a href="" class="link-navmb">Майстрам</a>
+            </li>
+            <li class="item-navmb">
+              <a href="" class="link-navmb">Контакти</a>
+            </li>
+          </ul>
         </nav>
-        </div>
-    </nav>
+      </div>
     </div>
   `;
 }
 
 export function initHeader() {
-  const btn = document.querySelector('.mobile-menu-btn');
+  const mobileMenu = document.querySelector('.mobile-menu');
+  const navList = document.querySelector('.list-navmb');
+  const openMenuBtn = document.querySelector('.mobile-menu-btn');
+  const closeMenuBtn = document.querySelector('.mobile-menu-close');
 
-  btn.addEventListener('click', () => {
-    // логіка мобільного меню
+  const toggleMenu = () => {
+    mobileMenu.classList.toggle('is-open');
+    const isOpen = mobileMenu.classList.contains('is-open');
+    mobileMenu.setAttribute('aria-hidden', !isOpen);
+  };
+
+  navList?.addEventListener('click', event => {
+    if (event.target.closest('a[href^="#"]')) {
+      toggleMenu();
+    }
   });
+  document.addEventListener('keydown', event => {
+    if (event.code === 'Escape' && mobileMenu.classList.contains('is-open')) {
+      toggleMenu();
+    }
+  });
+
+  openMenuBtn.addEventListener('click', toggleMenu);
+  closeMenuBtn.addEventListener('click', toggleMenu);
 }
