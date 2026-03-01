@@ -1,0 +1,239 @@
+/* Section title */
+.learning-title {
+  font-family: var(--font-accent);
+  font-size: var(--fs-xl);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: var(--space-md);
+  color: var(--color-text-main);
+}
+
+.learning-group {
+  margin-bottom: var(--space-xl);
+}
+
+.learning-subtitle {
+  font-family: var(--font-main);
+  font-size: var(--fs-lg);
+  font-weight: 600;
+  text-align: center;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-md);
+}
+
+/* Online list */
+.list-online {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+/* Offline list */
+.list-offline {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+/* Online card */
+.item-online {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  min-height: 260px;
+}
+
+.item-online {
+    background-color: var(--color-accent-blue);
+    border: 2px solid rgba(179, 152, 93, 0.25);
+    border-top: 4px solid var(--color-accent-gold);
+    box-shadow: var(--shadow-soft);
+}
+
+.item-online::before {
+    display: none;
+    /* прибираємо оверлей */
+}
+
+/* Offline card */
+.item-offline {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: visible;
+  min-height: 320px;
+  background-color: var(--color-bg-card);
+  border: 2px solid rgba(133, 167, 177, 0.25);
+  border-top: 4px solid var(--color-accent-gold);
+  box-shadow: var(--shadow-soft);
+}
+
+/* Content */
+.content-card {
+  position: relative;
+  z-index: 1;
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Badge */
+.badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  font-family: var(--font-main);
+  margin-bottom: var(--space-xs);
+  width: fit-content;
+}
+
+.badge-online {
+  background-color: var(--color-accent-gold);
+  color: var(--color-white);
+}
+
+.badge-offline {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* Card title */
+.title-card {
+  font-family: var(--font-accent);
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: var(--space-xs);
+}
+
+.item-offline .title-card {
+  color: var(--color-text-main);
+}
+
+/* Card description */
+.text-card {
+  font-size: var(--fs-base);
+  color: var(--color-bg-main);
+  margin-bottom: var(--space-sm);
+  line-height: 1.6;
+}
+
+.item-offline .text-card {
+  color: var(--color-text-secondary);
+}
+
+/* Features list */
+.list-course {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: var(--space-md);
+}
+
+.item-course {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: var(--fs-base);
+  color: var(--color-bg-main);
+}
+
+.item-offline .item-course {
+  color: var(--color-text-main);
+}
+
+.item-course .icon {
+  fill: var(--color-accent-gold);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Price */
+.price-card {
+  font-family: var(--font-accent);
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  color: var(--color-accent-gold);
+  margin-top: auto;
+  margin-bottom: var(--space-xs);
+}
+
+/* Learning contact */
+.learning-contact {
+  margin-top: var(--space-lg);
+  text-align: center;
+}
+
+.contact-text {
+  font-size: var(--fs-sm);
+  color: var(--color-text-light);
+  margin-bottom: var(--space-sm);
+}
+
+
+/* Tablet */
+@media only screen and (min-width: 768px) {
+  .list-online {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .list-offline {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .item-offline:last-child {
+    grid-column: 1 / -1;
+    max-width: calc(50% - var(--space-md) / 2);
+    margin: 0 auto;
+  }
+  .item-online {
+    min-height: 320px;
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1280px) {
+  .list-online {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 auto;
+  }
+
+  .list-offline {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .item-online {
+    min-height: 360px;
+  }
+
+  .item-offline {
+    min-height: 380px;
+  }
+
+  .learning-subtitle {
+    font-size: 24px;
+    margin-bottom: var(--space-lg);
+  }
+
+  .item-offline:last-child {
+    grid-column: auto;
+    max-width: none;
+    margin: 0;
+  }
+}
+.item-online .text-card {
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  color: var(--color-white);
+}
+
+.item-online .item-course {
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  color: var(--color-white);
+}
+
+.item-online .list-course {
+  flex-grow: 1;
+}

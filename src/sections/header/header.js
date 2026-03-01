@@ -12,7 +12,7 @@ export function renderHeader() {
             <a href="#about" class="link-nav">Про мене</a>
           </li>
           <li class="item-nav">
-            <a href="" class="link-nav">Навчання для себе</a>
+            <a href="#learning" class="link-nav">Навчання для себе</a>
           </li>
           <li class="item-nav">
             <a href="" class="link-nav">Стати майстром</a>
@@ -34,7 +34,7 @@ export function renderHeader() {
 
       <div class="mobile-menu" aria-hidden="true">
         <button class="mobile-menu-close" aria-label="Закрити меню">
-          <svg class="mobile-menu-icon" width="24" height="24">
+          <svg class="mobile-menu-icon" width="18" height="18">
             <use href="icons.svg#icon-x-close"></use>
           </svg>
         </button>
@@ -48,7 +48,7 @@ export function renderHeader() {
               <a href="#about" class="link-navmb">Про мене</a>
             </li>
             <li class="item-navmb">
-              <a href="" class="link-navmb">Навчання для себе</a>
+              <a href="#learning" class="link-navmb">Навчання для себе</a>
             </li>
             <li class="item-navmb">
               <a href="" class="link-navmb">Стати майстром</a>
