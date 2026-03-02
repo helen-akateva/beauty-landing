@@ -11,7 +11,7 @@ export function renderHeader() {
           <li class="item-nav">
             <a href="/#about" class="link-nav">Про мене</a>
           </li>
-          <li>
+          <li class="item-nav">
              <a href="/#gallery" class="link-nav">Галерея</a>
           </li>
           <li class="item-nav">
@@ -50,8 +50,8 @@ export function renderHeader() {
             <li class="item-navmb">
               <a href="/#about" class="link-navmb">Про мене</a>
             </li>
-             <li>
-             <a href="/#gallery" class="link-nav">Галерея</a>
+             <li class="item-navmb">
+             <a href="/#gallery" class="link-navmb">Галерея</a>
             </li>
             <li class="item-navmb">
               <a href="/#learning" class="link-navmb">Навчання для себе</a>
@@ -85,7 +85,7 @@ export function initHeader() {
   };
 
   navList?.addEventListener('click', event => {
-    if (event.target.closest('a[href^="#"]')) {
+    if (event.target.closest('a')) {
       toggleMenu();
     }
   });
