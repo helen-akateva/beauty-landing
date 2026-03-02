@@ -11,6 +11,9 @@ export function renderHeader() {
           <li class="item-nav">
             <a href="/#about" class="link-nav">Про мене</a>
           </li>
+          <li>
+             <a href="/#gallery" class="link-nav">Галерея</a>
+          </li>
           <li class="item-nav">
             <a href="/#learning" class="link-nav">Навчання для себе</a>
           </li>
@@ -18,10 +21,10 @@ export function renderHeader() {
             <a href="/#master" class="link-nav">Стати майстром</a>
           </li>
           <li class="item-nav">
-            <a href="" class="link-nav">Майстрам</a>
+            <a href="/#pro" class="link-nav">Майстрам</a>
           </li>
           <li class="item-nav">
-            <a href="" class="link-nav">Відгуки</a>
+            <a href="/#reviews" class="link-nav">Відгуки</a>
           </li>
         </ul>
 
@@ -47,6 +50,9 @@ export function renderHeader() {
             <li class="item-navmb">
               <a href="/#about" class="link-navmb">Про мене</a>
             </li>
+             <li>
+             <a href="/#gallery" class="link-nav">Галерея</a>
+            </li>
             <li class="item-navmb">
               <a href="/#learning" class="link-navmb">Навчання для себе</a>
             </li>
@@ -54,10 +60,10 @@ export function renderHeader() {
               <a href="/#master" class="link-navmb">Стати майстром</a>
             </li>
             <li class="item-navmb">
-              <a href="" class="link-navmb">Майстрам</a>
+              <a href="/#pro" class="link-navmb">Майстрам</a>
             </li>
             <li class="item-navmb">
-              <a href="" class="link-navmb">Відгуки</a>
+              <a href="/#reviews" class="link-navmb">Відгуки</a>
             </li>
           </ul>
         </nav>

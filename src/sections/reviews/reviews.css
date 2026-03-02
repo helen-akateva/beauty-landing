@@ -1,0 +1,19 @@
+.reviews-placeholder {
+    text-align: center;
+    padding: var(--space-xl);
+    background-color: var(--color-bg-card);
+    border-radius: var(--radius-md);
+    border: 2px dashed rgba(133, 167, 177, 0.4);
+}
+
+.reviews-placeholder-text {
+    font-family: var(--font-accent);
+    font-size: var(--fs-lg);
+    color: var(--color-text-main);
+    margin-bottom: var(--space-xs);
+}
+
+.reviews-placeholder-subtext {
+    font-size: var(--fs-sm);
+    color: var(--color-text-light);
+}
