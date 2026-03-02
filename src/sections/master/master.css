@@ -1,0 +1,64 @@
+/* Master list */
+.list-master {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+}
+
+/* Card */
+.item-master {
+    border-radius: var(--radius-md);
+    overflow: visible;
+    background-color: var(--color-bg-card);
+    border: 2px solid rgba(133, 167, 177, 0.25);
+    border-top: 4px solid var(--color-accent-gold);
+    box-shadow: var(--shadow-soft);
+}
+
+/* Combo card accent */
+.item-master--combo {
+    border-top: 4px solid var(--color-primary);
+}
+
+/* Badge */
+.badge-master {
+    background-color: var(--color-accent-gold);
+    color: var(--color-white);
+}
+
+.badge-combo {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+/* Contact */
+.master-contact {
+    margin-top: var(--space-lg);
+    text-align: center;
+}
+
+/* Tablet */
+@media only screen and (min-width: 768px) {
+    .list-master {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .item-master--combo {
+        grid-column: 1 / -1;
+        max-width: calc(50% - var(--space-md) / 2);
+        margin: 0 auto;
+    }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1280px) {
+    .list-master {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .item-master--combo {
+        grid-column: auto;
+        max-width: none;
+        margin: 0;
+    }
+}

@@ -37,22 +37,45 @@
 
 /* Online card */
 .item-online {
-  position: relative;
+  display: flex;
+  flex-direction: column;
   border-radius: var(--radius-md);
   overflow: hidden;
-  min-height: 260px;
-}
-
-.item-online {
-    background-color: var(--color-accent-blue);
-    border: 2px solid rgba(179, 152, 93, 0.25);
-    border-top: 4px solid var(--color-accent-gold);
-    box-shadow: var(--shadow-soft);
+  background-color: var(--color-bg-card);
+  border: 2px solid rgba(133, 167, 177, 0.25);
+  border-top: 4px solid var(--color-accent-gold);
+  box-shadow: var(--shadow-soft);
 }
 
 .item-online::before {
-    display: none;
-    /* прибираємо оверлей */
+  display: none;
+}
+
+/* Course image */
+.img-course {
+  /* width: 100%; */
+  height: 160px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.item-online .content-card {
+  flex: 1;
+}
+
+.item-online .title-card {
+  color: var(--color-text-main);
+}
+
+.item-online .text-card {
+  color: var(--color-text-secondary);
+  font-size: var(--fs-sm);
+}
+
+.item-online .item-course {
+  color: var(--color-text-main);
+  font-size: var(--fs-sm);
 }
 
 /* Offline card */
@@ -75,7 +98,10 @@
   display: flex;
   flex-direction: column;
 }
-
+.item-online .content-card {
+  flex: 1;
+  min-width: 0;
+}
 /* Badge */
 .badge {
   display: inline-block;
@@ -103,7 +129,7 @@
   font-family: var(--font-accent);
   font-size: var(--fs-lg);
   font-weight: 700;
-  color: var(--color-white);
+  color: var(--color-text-main);
   margin-bottom: var(--space-xs);
 }
 
@@ -114,13 +140,9 @@
 /* Card description */
 .text-card {
   font-size: var(--fs-base);
-  color: var(--color-bg-main);
+  color: var(--color-text-secondary);
   margin-bottom: var(--space-sm);
   line-height: 1.6;
-}
-
-.item-offline .text-card {
-  color: var(--color-text-secondary);
 }
 
 /* Features list */
@@ -129,6 +151,7 @@
   flex-direction: column;
   gap: 8px;
   margin-bottom: var(--space-md);
+  flex-grow: 1;
 }
 
 .item-course {
@@ -136,10 +159,6 @@
   align-items: flex-start;
   gap: 8px;
   font-size: var(--fs-base);
-  color: var(--color-bg-main);
-}
-
-.item-offline .item-course {
   color: var(--color-text-main);
 }
 
@@ -171,11 +190,31 @@
   margin-bottom: var(--space-sm);
 }
 
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.card-footer .price-card {
+  margin: 0;
+}
 
 /* Tablet */
 @media only screen and (min-width: 768px) {
   .list-online {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+  }
+
+  .item-online {
+    flex-direction: row;
+  }
+
+  .img-course {
+    width: 200px;
+    height: auto;
+    flex-shrink: 0;
   }
 
   .list-offline {
@@ -187,33 +226,24 @@
     max-width: calc(50% - var(--space-md) / 2);
     margin: 0 auto;
   }
-  .item-online {
-    min-height: 320px;
-  }
 }
 
 /* Desktop */
 @media only screen and (min-width: 1280px) {
   .list-online {
-    grid-template-columns: repeat(2, 1fr);
-    margin: 0 auto;
+    grid-template-columns: 1fr;
+  }
+
+  .img-course {
+    width: 260px;
   }
 
   .list-offline {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .item-online {
-    min-height: 360px;
-  }
-
   .item-offline {
     min-height: 380px;
-  }
-
-  .learning-subtitle {
-    font-size: 24px;
-    margin-bottom: var(--space-lg);
   }
 
   .item-offline:last-child {
@@ -221,19 +251,9 @@
     max-width: none;
     margin: 0;
   }
-}
-.item-online .text-card {
-  font-size: var(--fs-sm);
-  font-weight: 500;
-  color: var(--color-white);
-}
 
-.item-online .item-course {
-  font-size: var(--fs-sm);
-  font-weight: 500;
-  color: var(--color-white);
-}
-
-.item-online .list-course {
-  flex-grow: 1;
+  .learning-subtitle {
+    font-size: 24px;
+    margin-bottom: var(--space-lg);
+  }
 }

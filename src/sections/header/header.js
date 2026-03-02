@@ -6,22 +6,22 @@ export function renderHeader() {
 
         <ul class="list-nav">
           <li class="item-nav">
-            <a href="#services" class="link-nav">Послуги</a>
+            <a href="/#services" class="link-nav">Послуги</a>
           </li>
           <li class="item-nav">
-            <a href="#about" class="link-nav">Про мене</a>
+            <a href="/#about" class="link-nav">Про мене</a>
           </li>
           <li class="item-nav">
-            <a href="#learning" class="link-nav">Навчання для себе</a>
+            <a href="/#learning" class="link-nav">Навчання для себе</a>
           </li>
           <li class="item-nav">
-            <a href="" class="link-nav">Стати майстром</a>
+            <a href="/#master" class="link-nav">Стати майстром</a>
           </li>
           <li class="item-nav">
             <a href="" class="link-nav">Майстрам</a>
           </li>
           <li class="item-nav">
-            <a href="" class="link-nav">Контакти</a>
+            <a href="" class="link-nav">Відгуки</a>
           </li>
         </ul>
 
@@ -42,22 +42,22 @@ export function renderHeader() {
          <a href="./index.html" class="logo logo-nav-mb">Оксана Лихацька</a>
           <ul class="list-navmb">
             <li class="item-navmb">
-              <a href="#services" class="link-navmb">Послуги</a>
+              <a href="/#services" class="link-navmb">Послуги</a>
             </li>
             <li class="item-navmb">
-              <a href="#about" class="link-navmb">Про мене</a>
+              <a href="/#about" class="link-navmb">Про мене</a>
             </li>
             <li class="item-navmb">
-              <a href="#learning" class="link-navmb">Навчання для себе</a>
+              <a href="/#learning" class="link-navmb">Навчання для себе</a>
             </li>
             <li class="item-navmb">
-              <a href="" class="link-navmb">Стати майстром</a>
+              <a href="/#master" class="link-navmb">Стати майстром</a>
             </li>
             <li class="item-navmb">
               <a href="" class="link-navmb">Майстрам</a>
             </li>
             <li class="item-navmb">
-              <a href="" class="link-navmb">Контакти</a>
+              <a href="" class="link-navmb">Відгуки</a>
             </li>
           </ul>
         </nav>

@@ -8,6 +8,15 @@ export function renderLearning() {
           <h3 class="learning-subtitle">Онлайн-курси</h3>
           <ul class="list-online">
             <li class="item-online">
+              <img
+                class="img-course"
+                srcset="/image_learning/arrow.webp 1x, /image_learning/arrow2x.webp 2x"
+                src="/image_learning/arrow.webp"
+                width="400"
+                height="300"
+                alt="Курс стрілки на Easy"
+                loading="lazy"
+              />
               <div class="content-card">
                 <span class="badge badge-online">Online</span>
                 <h3 class="title-card">Курс "Стрілки на Easy"</h3>
@@ -35,6 +44,7 @@ export function renderLearning() {
                     Проста схема яку легко повторити
                   </li>
                 </ul>
+                <div class="card-footer">
                 <p class="price-card">349 грн</p>
                 <a
                   href="https://secure.wayforpay.com/button/b1da79a682e60"
@@ -44,10 +54,20 @@ export function renderLearning() {
                 >
                   Купити
                 </a>
+                </div>
               </div>
             </li>
 
             <li class="item-online">
+              <img
+                class="img-course"
+                srcset="/image_learning/nud.webp 1x, /image_learning/nud2x.webp 2x"
+                src="/image_learning/nud.webp"
+                width="400"
+                height="300"
+                alt="Курс Nude makeup"
+                loading="lazy"
+              />
               <div class="content-card">
                 <span class="badge badge-online">Online</span>
                 <h3 class="title-card">Курс "Nude makeup"</h3>
@@ -81,6 +101,7 @@ export function renderLearning() {
                     Бонус: гайд по типу шкіри + список косметики
                   </li>
                 </ul>
+                <div class="card-footer">
                 <p class="price-card">349 грн</p>
                 <a
                   href="#"
@@ -90,6 +111,7 @@ export function renderLearning() {
                 >
                   Купити
                 </a>
+                </div>
               </div>
             </li>
           </ul>
@@ -195,15 +217,15 @@ export function renderLearning() {
           <div class="learning-contact">
             <p class="contact-text">Запис на навчання здійснюється через Instagram</p>
             <a
-              href='https://www.instagram.com/oksana_lykhatska?igsh=Zng4ZTd5ZzhvZ3Zo'
+              href="https://www.instagram.com/oksana_lykhatska?igsh=Zng4ZTd5ZzhvZ3Zo"
               target="_blank"
               rel="noopener noreferrer"
               class="hero-btn"
             >
               Записатися на курс
-               <svg class="card-icon" width="18" height="18">
-                 <use href="icons.svg#icon-instagram"></use>
-               </svg>
+              <svg class="card-icon" width="18" height="18">
+                <use href="icons.svg#icon-instagram"></use>
+              </svg>
             </a>
           </div>
         </div>
