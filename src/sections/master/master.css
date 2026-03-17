@@ -1,0 +1,139 @@
+/* --- СЕКЦІЯ МАЙСТЕР (Mobile First: 375 -> 768 -> 1280) --- */
+
+/* 1. MOBILE (від 375px) */
+.section-title {
+    text-align: center;
+    margin-bottom: var(--space-lg);
+    font-family: var(--font-accent);
+    font-size: var(--fs-xl);
+}
+
+.list-master {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    margin: 0 auto;
+}
+
+.item-master .content-card {
+    background-color: var(--color-bg-card);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-accent-blue);
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.item-master .content-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-soft);
+}
+
+.item-master--combo .content-card {
+    border: 1px solid var(--color-accent-gold);
+}
+
+/* Структура тіла картки (Вертикальна для 375 та 768) */
+.item-master .card-body {
+    display: grid;
+    grid-template-columns: 1fr;
+   padding: var(--space-sm);
+    text-align: center;
+    justify-items: center;
+}
+
+.badge-master,
+.badge-combo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 76px;
+    height: 60px;
+    font-size: 11px;
+    border-radius: 50% 20% 50% 20%;
+    background: var(--color-primary-hover);
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.badge-combo {
+    background: var(--color-accent-gold);
+}
+
+.item-master .title-card {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.item-master .text-card {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--color-text-secondary);
+    max-width: 400px;
+}
+
+.item-master .price-card {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.btn-more {
+    font-weight: 600;
+    color: var(--color-accent-blue);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* 2. TABLET (від 768px) */
+@media only screen and (min-width: 768px) {
+    .list-master {
+        max-width: 700px;
+        /* Обмежуємо ширину, щоб картка на планшеті не була надто широкою */
+    }
+
+
+    .item-master .title-card {
+        font-size: 22px;
+    }
+
+    .item-master .text-card {
+        font-size: 15px;
+        max-width: 500px;
+    }
+}
+
+/* 3. DESKTOP (від 1280px) */
+@media only screen and (min-width: 1280px) {
+    .list-master {
+        max-width: 1200px;
+    }
+
+    .item-master .card-body {
+        /* Перехід у лінію */
+        grid-template-columns: 80px 220px 1fr 140px 110px;
+        gap: 32px;
+        padding: 24px 36px;
+        text-align: left;
+        justify-items: start;
+    }
+
+    .item-master .content-card:hover {
+        transform: translateX(8px);
+        /* На десктопі зсув вбік виглядає краще */
+    }
+
+    .item-master .text-card {
+        margin: 0;
+        max-width: none;
+    }
+
+    .item-master .price-card {
+        text-align: right;
+        width: 100%;
+        font-size: 20px;
+    }
+
+    .item-master .btn-more {
+        text-align: right;
+        width: 100%;
+    }
+}
