@@ -11,7 +11,7 @@ export function renderMaster() {
               <h3 class="title-card">Візажист PRO BASIC</h3>
               <p class="text-card">Професійний макіяж від 0 до експертного рівня. Повна підготовка майстра з практикою на моделях.</p>
               <p class="price-card">15 000 грн</p>
-              <a href="./makeup-pro-basic.html" class="hero-btn">Детальніше</a>
+              <a href="./makeup-pro-basic.html" class="">Детальніше</a>
             </div>
           </li>
 
@@ -21,7 +21,7 @@ export function renderMaster() {
               <h3 class="title-card">Візажист PRO EXPRESS</h3>
               <p class="text-card">Концентрована програма для швидкого старту в професії без втрати якості навчання.</p>
               <p class="price-card">10 000 грн</p>
-              <a href="./makeup-pro-express.html" class="hero-btn">Детальніше</a>
+              <a href="./makeup-pro-express.html" class="">Детальніше</a>
             </div>
           </li>
 
@@ -31,7 +31,7 @@ export function renderMaster() {
               <h3 class="title-card">Brow Master</h3>
               <p class="text-card">Базовий курс бровиста з нуля — архітектура, колористика, техніки фарбування.</p>
               <p class="price-card">7 000 грн</p>
-              <a href="./brow-master.html" class="hero-btn">Детальніше</a>
+              <a href="./brow-master.html" class="">Детальніше</a>
             </div>
           </li>
 
@@ -41,7 +41,7 @@ export function renderMaster() {
               <h3 class="title-card">Lamimaker з 0</h3>
               <p class="text-card">Базовий курс ламінування вій — техніка, хімічні процеси, безпека та практика.</p>
               <p class="price-card">5 000 грн</p>
-              <a href="./lamimaker.html" class="hero-btn">Детальніше</a>
+              <a href="./lamimaker.html" class="">Детальніше</a>
             </div>
           </li>
 
@@ -51,7 +51,7 @@ export function renderMaster() {
               <h3 class="title-card">Basic Brow & Lash Master</h3>
               <p class="text-card">Дві професії в одному навчанні — брови та ламінування вій. Вигідна ціна замість 12 000 грн.</p>
               <p class="price-card">10 000 грн</p>
-              <a href="./brow-lash-master.html" class="hero-btn">Детальніше</a>
+              <a href="./brow-lash-master.html" class="">Детальніше</a>
             </div>
           </li>
 
