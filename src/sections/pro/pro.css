@@ -1,0 +1,123 @@
+/* --- СЕКЦІЯ МАЙСТРАМ (Mobile First) --- */
+
+/* 1. БАЗОВІ СТИЛІ (Мобільні - 375px+) */
+
+.list-masters {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Одна під одною */
+    gap: var(--space-md);
+    margin: 0 auto;
+}
+
+.item-masters .content-card {
+    background-color: var(--color-bg-card);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-accent-blue);
+    height: 100%;
+    /* Щоб картки в ряду були однакової висоти */
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.item-masters .content-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-soft);
+}
+
+/* Акцент на Телеграм-канал */
+.item-masters--channel .content-card {
+    border-color: var(--color-accent-gold);
+}
+
+.item-masters .card-body {
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-md);
+    height: 100%;
+}
+
+.item-masters .title-card {
+    font-size: 20px;
+    margin-bottom: var(--space-xs);
+    font-family: var(--font-accent);
+}
+
+.item-masters .text-card {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-md);
+    line-height: 1.5;
+}
+
+/* Список переваг */
+.item-masters .list-course {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: var(--space-lg);
+    flex-grow: 1;
+    /* Штовхає ціну та кнопку вниз */
+}
+
+.item-masters .item-course {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 14px;
+    text-align: left;
+}
+
+.item-masters .icon {
+    fill: var(--color-accent-gold);
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+/* Футер картки (ціна + кнопка) */
+.item-masters .card-footer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    align-items: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    padding-top: var(--space-md);
+}
+
+.item-masters .price-card {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-text-main);
+}
+
+/* 2. ПЛАНШЕТ (від 768px) */
+
+@media only screen and (min-width: 768px) {
+    .list-masters {
+        grid-template-columns: repeat(2, 1fr);
+        /* Дві поруч */
+        gap: var(--space-md);
+    }
+
+    .item-masters .card-body {
+        padding: var(--space-lg);
+    }
+
+    .item-masters .card-footer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+/* 3. ДЕСКТОП (від 1280px) */
+
+@media only screen and (min-width: 1280px) {
+    .list-masters {
+        max-width: 1000px;
+        /* Обмежуємо ширину, щоб картки не були надто широкими */
+        gap: var(--space-lg);
+    }
+
+    .item-masters .title-card {
+        font-size: 24px;
+    }
+}

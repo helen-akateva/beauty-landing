@@ -230,7 +230,7 @@ export function renderLearning() {
               href="https://www.instagram.com/oksana_lykhatska?igsh=Zng4ZTd5ZzhvZ3Zo"
               target="_blank"
               rel="noopener noreferrer"
-              class="btn"
+              class="hero-btn"
             >
               Записатися на курс
               <svg class="card-icon" width="18" height="18" aria-hidden="true">
