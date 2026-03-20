@@ -108,7 +108,6 @@ function renderCourseBasic() {
             </div>
           </li>
           <li class="item-program">
-            <span class="program-num">07</span>
             <div class="program-content">
               <h3 class="program-title">Заняття 7 — Темний смокі на кремовій основі</h3>
             </div>

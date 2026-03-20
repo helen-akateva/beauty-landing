@@ -152,7 +152,17 @@ export function renderLearning() {
                       Самостійний макіяж під контролем майстра
                     </li>
                   </ul>
-                  <strong class="price-card">4000 грн</strong>
+                  <div class="card-footer">
+                    <strong class="price-card">4000 грн</strong>
+                    <a
+                      href="https://www.instagram.com/oksana_lykhatska?igsh=Zng4ZTd5ZzhvZ3Zo"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="btn"
+                    >
+                      Записатися
+                    </a>
+                  </div>
                 </div>
               </article>
             </li>
@@ -185,7 +195,17 @@ export function renderLearning() {
                       Нюанси які роблять макіяж "дорогим"
                     </li>
                   </ul>
-                  <strong class="price-card">1500 грн</strong>
+                  <div class="card-footer">
+                    <strong class="price-card">1500 грн</strong>
+                    <a
+                      href="https://www.instagram.com/oksana_lykhatska?igsh=Zng4ZTd5ZzhvZ3Zo"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="btn"
+                    >
+                      Записатися
+                    </a>
+                  </div>
                 </div>
               </article>
             </li>
@@ -218,28 +238,21 @@ export function renderLearning() {
                       Алгоритм зборів перед виступом
                     </li>
                   </ul>
-                  <strong class="price-card">1500 грн</strong>
+                  <div class="card-footer">
+                    <strong class="price-card">1500 грн</strong>
+                    <a
+                      href="https://www.instagram.com/oksana_lykhatska?igsh=Zng4ZTd5ZzhvZ3Zo"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="btn"
+                    >
+                      Записатися
+                    </a>
+                  </div>
                 </div>
               </article>
             </li>
           </ul>
-
-          <div class="learning-contact">
-            <p class="contact-text">Запис на навчання здійснюється через Instagram</p>
-            <a
-              href="https://www.instagram.com/oksana_lykhatska?igsh=Zng4ZTd5ZzhvZ3Zo"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="hero-btn"
-            >
-              Записатися на курс
-              <svg class="card-icon" width="18" height="18" aria-hidden="true">
-                <use href="icons.svg#icon-instagram"></use>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
     </section>
   `;
 }

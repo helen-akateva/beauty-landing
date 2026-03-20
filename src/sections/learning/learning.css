@@ -1,22 +1,33 @@
+/* ======================================================
+   LEARNING SECTION — Mobile First (375 → 768 → 1280)
+   ====================================================== */
+
+/* --- Section title --- */
 .learning-title {
   text-align: center;
   margin-bottom: var(--space-lg);
   font-family: var(--font-accent);
-  font-size: var(--fs-xl);
+  font-size: clamp(26px, 5vw, var(--fs-xl));
 }
 
+/* --- Group separator --- */
+.learning-group:not(:last-child) {
+  margin-bottom: var(--space-xl);
+}
+
+/* --- Subtitle --- */
 .learning-subtitle {
   font-family: var(--font-accent);
-  font-size: var(--fs-lg);
+  font-size: clamp(18px, 3vw, var(--fs-lg));
   margin-bottom: var(--space-md);
   color: var(--color-accent-blue);
   border-left: 4px solid var(--color-accent-gold);
   padding-left: var(--space-xs);
 }
 
-.learning-group:not(:last-child) {
-  margin-bottom: var(--space-xl);
-}
+/* ======================================================
+   CONTENT CARD (shared by online & offline)
+   ====================================================== */
 
 .content-card {
   background-color: var(--color-bg-card);
@@ -32,10 +43,20 @@
 }
 
 .content-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
   box-shadow: var(--shadow-hover);
 }
 
+/* --- Card image --- */
+.img-course {
+  width: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+  display: block;
+  flex-shrink: 0;
+}
+
+/* --- Card body --- */
 .card-body {
   padding: var(--space-md);
   display: flex;
@@ -43,16 +64,17 @@
   flex-grow: 1;
 }
 
+/* --- Badge --- */
 .badge {
   display: inline-block;
   align-self: flex-start;
-  padding: 4px 12px;
+  padding: 4px 14px;
   border-radius: 20px;
-  font-size: var(--fs-sm);
-  font-weight: 600;
-  margin-bottom: var(--space-sm);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-bottom: var(--space-xs);
   text-transform: uppercase;
-  min-height: 24px;
 }
 
 .badge-online {
@@ -65,8 +87,9 @@
   color: var(--color-white);
 }
 
+/* --- Card text --- */
 .title-card {
-  font-size: var(--fs-lg);
+  font-size: clamp(16px, 2.5vw, var(--fs-lg));
   margin-bottom: var(--space-xs);
   color: var(--color-text-main);
 }
@@ -74,14 +97,16 @@
 .text-card {
   color: var(--color-text-secondary);
   font-size: var(--fs-sm);
+  line-height: 1.6;
   margin-bottom: var(--space-md);
 }
 
+/* --- Feature list --- */
 .list-course {
   margin-bottom: var(--space-md);
   display: flex;
   flex-direction: column;
-  gap: var(--space-xs);
+  gap: 10px;
   flex-grow: 1;
 }
 
@@ -90,22 +115,62 @@
   align-items: flex-start;
   gap: 10px;
   font-size: var(--fs-sm);
+  line-height: 1.5;
 }
 
 .item-course .icon {
   fill: var(--color-accent-gold);
   flex-shrink: 0;
-  margin-top: 3px;
+  margin-top: 2px;
 }
 
+/* --- Price --- */
 .price-card {
   display: block;
-  font-size: var(--fs-lg);
+  font-size: clamp(18px, 2.5vw, var(--fs-lg));
   color: var(--color-accent-blue);
   font-weight: 700;
   margin-top: auto;
   margin-bottom: var(--space-sm);
 }
+
+/* --- Card footer (price + button row) --- */
+.card-footer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  margin-top: auto;
+  padding-top: var(--space-xs);
+  border-top: 1px solid rgba(79, 107, 117, 0.15);
+}
+
+/* ======================================================
+   BUTTON
+   ====================================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: var(--color-accent-gold);
+  color: var(--color-white);
+  padding: 12px 24px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: var(--fs-sm);
+  transition: background-color var(--transition), transform var(--transition);
+  white-space: nowrap;
+}
+
+.btn:hover {
+  background-color: var(--color-accent-gold-hover);
+  transform: translateY(-2px);
+}
+
+/* ======================================================
+   ONLINE LIST
+   ====================================================== */
 
 .list-online {
   display: flex;
@@ -113,10 +178,9 @@
   gap: var(--space-md);
 }
 
-.img-course {
-  object-fit: cover;
-  object-position: center 40%;
-}
+/* ======================================================
+   OFFLINE LIST
+   ====================================================== */
 
 .list-offline {
   display: grid;
@@ -124,69 +188,77 @@
   gap: var(--space-md);
 }
 
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  background-color: var(--color-accent-gold);
-  color: var(--color-white);
-  padding: 12px 20px;
-  border-radius: var(--radius-sm);
-  font-weight: 600;
-  transition: var(--transition);
+/* Offline cards: hide image placeholder, full card body */
+.item-offline .card-body {
+  padding: var(--space-md);
 }
 
-.btn:hover {
-  background-color: var(--color-accent-gold-hover);
-}
+/* ======================================================
+   CONTACT BLOCK (offline section)
+   ====================================================== */
 
 .learning-contact {
   margin-top: var(--space-xl);
   text-align: center;
-  padding: var(--space-lg);
+  padding: var(--space-lg) var(--space-md);
+  background: linear-gradient(
+    135deg,
+    var(--color-primary-soft) 0%,
+    var(--color-bg-card) 100%
+  );
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(79, 107, 117, 0.15);
 }
 
 .contact-text {
   margin-bottom: var(--space-md);
   font-size: var(--fs-sm);
+  color: var(--color-text-secondary);
 }
 
 .card-icon {
   fill: currentColor;
 }
+
+/* ======================================================
+   TABLET (768px+)
+   ====================================================== */
+
 @media only screen and (min-width: 768px) {
+  /* Online cards — horizontal layout */
   .item-online .content-card {
     flex-direction: row;
   }
 
   .item-online .img-course {
     width: 40%;
+    height: auto;
   }
 
   .item-online .card-body {
     width: 60%;
   }
 
-  .item-online .card-footer {
-    margin-top: auto;
-    display: flex;
+  .item-online .card-footer,
+  .item-offline .card-footer {
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    margin-top: auto;
   }
 
-  .item-online .price-card {
+  .item-online .price-card,
+  .item-offline .price-card {
     margin-bottom: 0;
     margin-top: 0;
   }
 
-  .btn {
-    padding: 14px 26px;
-  }
+  /* Offline grid — 2 columns */
   .list-offline {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  /* If odd last child, center it */
   .item-offline:last-child:nth-child(odd) {
     grid-column: 1 / span 2;
     justify-self: center;
@@ -194,7 +266,23 @@
   }
 }
 
+/* ======================================================
+   DESKTOP (1280px+)
+   ====================================================== */
+
 @media only screen and (min-width: 1280px) {
+  /* Online cards — fixed image width */
+  .item-online .content-card {
+    max-height: 460px;
+  }
+
+  .item-online .img-course {
+    width: 380px;
+    flex-shrink: 0;
+    height: 100%;
+  }
+
+  /* Offline grid — 3 columns */
   .list-offline {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -202,17 +290,6 @@
   .item-offline:last-child:nth-child(odd) {
     grid-column: auto;
     width: 100%;
-  }
-
-  .btn {
-    padding: 14px 36px;
-  }
-  .item-online .content-card {
-    max-height: 450px;
-  }
-
-  .item-online .img-course {
-    width: 380px;
-    flex-shrink: 0;
+    justify-self: auto;
   }
 }
