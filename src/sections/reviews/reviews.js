@@ -20,7 +20,7 @@ const reviewsItems = [
   { id: '12', name: 'Клієнт 12' },
 ];
 
-function renderReviewSlide({ id, name }) {
+function renderReviewSlide({ id, name }, index) {
   return `
     <div class="swiper-slide reviews-slide">
       <picture>
@@ -42,7 +42,7 @@ function renderReviewSlide({ id, name }) {
 }
 
 export function renderReviews() {
-  const slides = reviewsItems.map(renderReviewSlide).join('');
+  const slides = reviewsItems.map((item, index) => renderReviewSlide(item, index)).join('');
 
   return `
     <section class="section" id="reviews">

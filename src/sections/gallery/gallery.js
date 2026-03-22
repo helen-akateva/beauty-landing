@@ -20,7 +20,7 @@ const galleryItems = [
   { id: '12', alt: 'Робота майстра 12' },
 ];
 
-function renderSlide({ id, alt }) {
+function renderSlide({ id, alt }, index) {
   return `
     <div class="swiper-slide gallery-slide">
       <picture>
@@ -46,7 +46,7 @@ function renderSlide({ id, alt }) {
 
 // Повертає лише вміст — без <section>, бо секція вже є в index.html
 export function renderGallery() {
-  const slides = galleryItems.map(renderSlide).join('');
+  const slides = galleryItems.map((item, index) => renderSlide(item, index)).join('');
 
   return `
     <div class="section gallery-section">
