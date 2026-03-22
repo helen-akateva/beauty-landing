@@ -20,7 +20,7 @@ const galleryItems = [
   { id: '12', alt: 'Робота майстра 12' },
 ];
 
-function renderSlide({ id, alt }, index) {
+function renderSlide({ id, alt }) {
   return `
     <div class="swiper-slide gallery-slide">
       <picture>
@@ -37,7 +37,7 @@ function renderSlide({ id, alt }, index) {
           src="image_gallery/work-${id}mb.webp"
           srcset="image_gallery/work-${id}mb.webp 1x, image_gallery/work-${id}mb2x.webp 2x"
           alt="${alt}"
-          loading="${index < 12 ? 'eager' : 'lazy'}"
+          loading="eager"
         />
       </picture>
     </div>
@@ -46,8 +46,7 @@ function renderSlide({ id, alt }, index) {
 
 // Повертає лише вміст — без <section>, бо секція вже є в index.html
 export function renderGallery() {
-  const slides = galleryItems.map((item, index) => renderSlide(item, index)).join('');
-
+  const slides = galleryItems.map(renderSlide).join('');
   return `
     <div class="section gallery-section">
       <div class="container">
