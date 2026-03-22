@@ -1,0 +1,115 @@
+/* ===== Footer ===== */
+
+.footer {
+    background-color: var(--color-header-bg, #1a1a1a);
+    color: var(--color-header-text, #fff);
+    padding: var(--space-lg) 0 var(--space-md);
+}
+
+/* --- Рядок 1 --- */
+.footer-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+    padding-bottom: var(--space-md);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Логотип */
+.footer-logo {
+    font-family: var(--font-accent, serif);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-accent-gold, #c9a84c);
+    text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.footer-logo:hover {
+    color: var(--color-primary-hover, #e0c060);
+}
+
+/* Навігація */
+.footer-nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px 16px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-nav-link {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    transition: color var(--transition);
+    white-space: nowrap;
+}
+
+.footer-nav-link:hover {
+    color: var(--color-accent-gold, #c9a84c);
+}
+
+/* Instagram */
+.footer-social {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    flex-shrink: 0;
+    transition: color var(--transition);
+}
+
+.footer-social:hover {
+    color: var(--color-accent-gold, #c9a84c);
+}
+
+.footer-social-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-social-label {
+    font-size: 13px;
+}
+
+/* --- Рядок 2 --- */
+.footer-bottom {
+    padding-top: var(--space-sm);
+    text-align: center;
+}
+
+.footer-copy {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.4);
+    margin: 0;
+}
+
+/* --- Мобільна версія --- */
+@media only screen and (max-width: 767px) {
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: var(--space-sm);
+    }
+
+    .footer-nav-list {
+        gap: 4px 12px;
+    }
+
+    .footer-nav-link {
+        font-size: 12px;
+    }
+}

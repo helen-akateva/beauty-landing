@@ -7,6 +7,9 @@
 @import '../sections/hero/hero.css';
 @import '../sections/services/services.css';
 @import '../sections/about/about.css';
+@import '../sections/gallery/gallery.css';
 @import '../sections/learning/learning.css';
 @import '../sections/master/master.css';
-@import '../sections/pro/pro.css'
+@import '../sections/pro/pro.css';
+@import '../sections/reviews/reviews.css';
+@import '../sections/footer/footer.css'

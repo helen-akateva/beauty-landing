@@ -1,4 +1,3 @@
-import './gallery.css';
 import Swiper from 'swiper';
 import { EffectCoverflow, Navigation, Pagination, A11y } from 'swiper/modules';
 import 'swiper/css';

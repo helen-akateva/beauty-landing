@@ -1,4 +1,6 @@
 import { renderHeader, initHeader } from '../sections/header/header.js';
+import { renderFooter } from '../sections/footer/footer.js';
+import '../sections/footer/footer.css';
 import '../sections/header/header.css';
 import '../styles/main.css';
 import '../styles/course.css';
@@ -143,5 +145,6 @@ function renderBrowMaster() {
 }
 
 document.querySelector('#header').innerHTML = renderHeader();
+document.querySelector('#footer').innerHTML = renderFooter();
 initHeader();
 document.querySelector('#course-detail').innerHTML = renderBrowMaster();
