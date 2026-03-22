@@ -8,7 +8,7 @@ import { renderAbout } from './src/sections/about/about.js';
 import { renderLearning } from './src/sections/learning/learning.js';
 import { renderMaster } from './src/sections/master/master.js';
 import { renderPro } from './src/sections/pro/pro.js';
-import { renderReviews } from './src/sections/reviews/reviews.js';
+import { renderReviews, initReviews } from './src/sections/reviews/reviews.js';
 import { renderGallery, initGallery } from './src/sections/gallery/gallery.js';
 
 // Вставка секцій в DOM
@@ -17,10 +17,11 @@ document.querySelector('#hero').innerHTML = renderHero();
 document.querySelector('#services').innerHTML = renderServices();
 document.querySelector('#about').innerHTML = renderAbout();
 document.querySelector('#gallery').innerHTML = renderGallery();
-initGallery();
 document.querySelector('#learning').innerHTML = renderLearning();
 document.querySelector('#master').innerHTML = renderMaster();
 document.querySelector('#pro').innerHTML = renderPro();
 document.querySelector('#reviews').innerHTML = renderReviews();
 
 initHeader();
+initGallery();
+initReviews();

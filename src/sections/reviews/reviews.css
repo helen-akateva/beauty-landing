@@ -1,19 +1,81 @@
-.reviews-placeholder {
-    text-align: center;
-    padding: var(--space-xl);
-    background-color: var(--color-bg-card);
+/* ===== Reviews Section ===== */
+
+.reviews-swiper-wrap {
+    position: relative;
+    padding-bottom: var(--space-lg);
+}
+
+.reviews-swiper {
+    overflow: hidden;
+    padding-bottom: var(--space-xs);
+}
+
+.reviews-slide {
     border-radius: var(--radius-md);
-    border: 2px dashed rgba(133, 167, 177, 0.4);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
 }
 
-.reviews-placeholder-text {
-    font-family: var(--font-accent);
-    font-size: var(--fs-lg);
-    color: var(--color-text-main);
-    margin-bottom: var(--space-xs);
+.reviews-slide picture {
+    display: block;
+    width: 100%;
 }
 
-.reviews-placeholder-subtext {
-    font-size: var(--fs-sm);
-    color: var(--color-text-light);
+.reviews-img {
+    width: 100%;
+    height: auto !important;
+    max-height: 480px;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+}
+
+@media only screen and (min-width: 768px) {
+    .reviews-img {
+        max-height: 560px;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .reviews-img {
+        max-height: 620px;
+    }
+}
+
+/* Navigation buttons */
+.reviews-btn {
+    --swiper-navigation-color: var(--color-primary);
+    transition: color var(--transition);
+}
+
+.reviews-btn::after {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.reviews-btn:hover {
+    --swiper-navigation-color: var(--color-primary-hover);
+}
+
+/* Pagination dots */
+.reviews-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: var(--space-sm);
+}
+
+.reviews-pagination .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    background: var(--color-primary);
+    opacity: 0.35;
+    border-radius: 50%;
+    transition: opacity var(--transition), transform var(--transition);
+}
+
+.reviews-pagination .swiper-pagination-bullet-active {
+    opacity: 1;
+    transform: scale(1.3);
+    background: var(--color-accent-gold);
 }
