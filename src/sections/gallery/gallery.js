@@ -37,7 +37,7 @@ function renderSlide({ id, alt }, index) {
           src="image_gallery/work-${id}mb.webp"
           srcset="image_gallery/work-${id}mb.webp 1x, image_gallery/work-${id}mb2x.webp 2x"
           alt="${alt}"
-          loading="${index < 4 ? 'eager' : 'lazy'}"
+          loading="${index < 12 ? 'eager' : 'lazy'}"
         />
       </picture>
     </div>
