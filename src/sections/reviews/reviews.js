@@ -32,7 +32,7 @@ function renderReviewSlide({ id, name }) {
           class="reviews-img"
           src="image_reviews/review-${id}.webp"
           alt="Відгук від ${name}"
-          loading="lazy"
+          loading="${index < 4 ? 'eager' : 'lazy'}"
           width="600"
           height="800"
         />
