@@ -2,7 +2,7 @@ export function renderLearning() {
   return `
     <section class="section" id="learning">
       <div class="container">
-        <h2 class="section-title learning-title">Навчання для себе</h2>
+        <h2 class="section-title">Навчання для себе</h2>
 
         <div class="learning-group">
           <h3 class="learning-subtitle">Онлайн-курси</h3>

@@ -8,11 +8,6 @@
   font-family: var(--font-accent);
 }
 
-.services .section-title {
-  font-size: var(--fs-xl);
-  color: var(--color-text-main);
-  margin-bottom: var(--space-lg);
-}
 
 .list-card {
   display: flex;

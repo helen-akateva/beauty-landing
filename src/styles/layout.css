@@ -15,6 +15,9 @@
 .section-title {
     text-align: center;
     margin-bottom: var(--space-lg);
+    font-family: var(--font-accent);
+    font-size: clamp(26px, 5vw, var(--fs-xl));
+        
 }
 
 

@@ -16,6 +16,9 @@
   --color-header-link: #f4f6f7;
   --color-accent-gold: #b3985d;
   --color-accent-gold-hover: #9c824c;
+  --swiper-navigation-color: #your-color;
+  --swiper-theme-color: #your-color;
+  
 
   /* Typography */
   --font-main: 'Montserrat', sans-serif;
@@ -46,4 +49,5 @@
   --space-md: 32px;
   --space-lg: 48px;
   --space-xl: 64px;
+
 }
