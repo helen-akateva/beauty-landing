@@ -127,12 +127,31 @@ function renderCourseExpress() {
 
     <section class="section course-gallery">
       <div class="container">
-        <h2 class="section-title">Роботи учнів</h2>
         <ul class="list-gallery">
-          <li class="item-gallery"><div class="gallery-placeholder">Фото</div></li>
-          <li class="item-gallery"><div class="gallery-placeholder">Фото</div></li>
-          <li class="item-gallery"><div class="gallery-placeholder">Фото</div></li>
-          <li class="item-gallery"><div class="gallery-placeholder">Фото</div></li>
+          <li class="item-gallery">
+  <picture>
+    <source srcset="image_courses/makeup/student-01.webp 1x, image_courses/makeup/student-01@2x.webp 2x" type="image/webp"/>
+    <img class="gallery-student-img" src="image_courses/makeup/student-01.webp" alt="Робота учня 1" loading="lazy" width="400" height="400"/>
+  </picture>
+</li>
+<li class="item-gallery">
+  <picture>
+    <source srcset="image_courses/makeup/student-02.webp 1x, image_courses/makeup/student-02@2x.webp 2x" type="image/webp"/>
+    <img class="gallery-student-img" src="image_courses/makeup/student-02.webp" alt="Робота учня 2" loading="lazy" width="400" height="400"/>
+  </picture>
+</li>
+<li class="item-gallery">
+  <picture>
+    <source srcset="image_courses/makeup/student-03.webp 1x, image_courses/makeup/student-03@2x.webp 2x" type="image/webp"/>
+    <img class="gallery-student-img" src="image_courses/makeup/student-03.webp" alt="Робота учня 3" loading="lazy" width="400" height="400"/>
+  </picture>
+</li>
+<li class="item-gallery">
+  <picture>
+    <source srcset="image_courses/makeup/student-04.webp 1x, image_courses/makeup/student-04@2x.webp 2x" type="image/webp"/>
+    <img class="gallery-student-img" src="image_courses/makeup/student-04.webp" alt="Робота учня 4" loading="lazy" width="400" height="400"/>
+  </picture>
+</li>
         </ul>
       </div>
     </section>
