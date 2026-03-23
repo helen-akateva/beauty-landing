@@ -18,6 +18,7 @@ const galleryItems = [
   { id: '10', alt: 'Робота майстра 10' },
   { id: '11', alt: 'Робота майстра 11' },
   { id: '12', alt: 'Робота майстра 12' },
+  { id: '13', alt: 'Робота майстра 13' },
 ];
 
 function renderSlide({ id, alt }) {
