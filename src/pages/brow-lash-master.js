@@ -7,7 +7,7 @@ import '../styles/course.css';
 
 function renderBrowLashMaster() {
   return `
-    <section class="section course-hero">
+    <section class="section course-hero brow-lash">
       <div class="container">
         <a href="/" class="back-link">← Назад</a>
         <div class="course-hero-content">

@@ -107,7 +107,7 @@ export function renderLearning() {
                   <div class="card-footer">
                     <strong class="price-card">349 грн</strong>
                     <a
-                      href="#"
+                      href="https://secure.wayforpay.com/button/b15ea6f68dbc7"
                       target="_blank"
                       rel="noopener noreferrer"
                       class="btn"
