@@ -11,8 +11,8 @@ export function renderLearning() {
               <article class="content-card">
                 <img
                   class="img-course"
-                  srcset="/image_learning/arrow.webp 1x, /image_learning/arrow2x.webp 2x"
-                  src="/image_learning/arrow.webp"
+                  srcset="image_learning/arrow.webp 1x, image_learning/arrow2x.webp 2x"
+                  src="image_learning/arrow.webp"
                   width="350"
                   height="400"
                   alt="Результат макіяжу зі стрілками"
@@ -64,8 +64,8 @@ export function renderLearning() {
               <article class="content-card">
                 <img
                   class="img-course"
-                  srcset="/image_learning/nud.webp 1x, /image_learning/nud2x.webp 2x"
-                  src="/image_learning/nud.webp"
+                  srcset="image_learning/nud.webp 1x, image_learning/nud2x.webp 2x"
+                  src="image_learning/nud.webp"
                   width="350"
                   height="400"
                   alt="Денний нюдовий макіяж"

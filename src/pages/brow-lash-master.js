@@ -9,7 +9,7 @@ function renderBrowLashMaster() {
   return `
     <section class="section course-hero brow-lash">
       <div class="container">
-        <a href="/" class="back-link">← Назад</a>
+        <a href="/#master" class="back-link">← Назад</a>
         <div class="course-hero-content">
           <span class="badge badge-combo">Комбо • 3 дні</span>
           <h1 class="course-title">Basic Brow & Lash Master</h1>

@@ -2,7 +2,7 @@ export function renderHeader() {
   return `
     <div class="container header-container">
       <nav class="page-nav">
-        <a href="./index.html" class="logo logo-nav">Оксана Лихацька</a>
+        <a href="/" class="logo logo-nav">Оксана Лихацька</a>
 
         <ul class="list-nav">
           <li class="item-nav">
@@ -42,7 +42,7 @@ export function renderHeader() {
           </svg>
         </button>
         <nav class="nav-mb">
-         <a href="./index.html" class="logo logo-nav-mb">Оксана Лихацька</a>
+         <a href="/" class="logo logo-nav-mb">Оксана Лихацька</a>
           <ul class="list-navmb">
             <li class="item-navmb">
               <a href="/#services" class="link-navmb">Послуги</a>

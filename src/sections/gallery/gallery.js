@@ -38,14 +38,14 @@ function renderSlide({ id, alt }) {
           src="image_gallery/work-${id}mb.webp"
           srcset="image_gallery/work-${id}mb.webp 1x, image_gallery/work-${id}mb2x.webp 2x"
           alt="${alt}"
-          loading="eager"
+          loading="lazy"
         />
       </picture>
     </div>
   `;
 }
 
-// Повертає лише вміст — без <section>, бо секція вже є в index.html
+
 export function renderGallery() {
   const slides = galleryItems.map(renderSlide).join('');
   return `

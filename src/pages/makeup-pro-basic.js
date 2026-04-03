@@ -9,7 +9,7 @@ function renderCourseBasic() {
   return `
     <section class="section course-hero makeup-basic">
       <div class="container">
-        <a href="/" class="back-link">← Назад</a>
+        <a href="/#master" class="back-link">← Назад</a>
         <div class="course-hero-content">
           <span class="badge badge-master">11 занять</span>
           <h1 class="course-title">Візажист PRO BASIC</h1>

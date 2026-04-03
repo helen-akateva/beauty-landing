@@ -9,7 +9,7 @@ function renderLamimaker() {
   return `
     <section class="section course-hero lami">
       <div class="container">
-        <a href="/" class="back-link">← Назад</a>
+        <a href="/#master" class="back-link">← Назад</a>
         <div class="course-hero-content">
           <span class="badge badge-master">1 день</span>
           <h1 class="course-title">Lamimaker з 0</h1>

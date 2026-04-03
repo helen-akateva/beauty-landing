@@ -6,7 +6,6 @@
     padding: var(--space-lg) 0 var(--space-md);
 }
 
-/* --- Рядок 1 --- */
 .footer-top {
     display: flex;
     align-items: center;
@@ -16,7 +15,6 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Логотип */
 .footer-logo {
     font-family: var(--font-accent, serif);
     font-size: 20px;
@@ -31,7 +29,6 @@
     color: var(--color-primary-hover, #e0c060);
 }
 
-/* Навігація */
 .footer-nav {
     flex: 1;
     display: flex;
@@ -84,7 +81,6 @@
     font-size: 13px;
 }
 
-/* --- Рядок 2 --- */
 .footer-bottom {
     padding-top: var(--space-sm);
     text-align: center;
@@ -96,7 +92,6 @@
     margin: 0;
 }
 
-/* --- Мобільна версія --- */
 @media only screen and (max-width: 767px) {
     .footer-top {
         flex-direction: column;

@@ -9,7 +9,7 @@ function renderBrowMaster() {
   return `
     <section class="section course-hero brow-master">
       <div class="container">
-        <a href="/" class="back-link">← Назад</a>
+        <a href="/#master" class="back-link">← Назад</a>
         <div class="course-hero-content">
           <span class="badge badge-master">2 дні</span>
           <h1 class="course-title">Brow Master</h1>

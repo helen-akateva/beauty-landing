@@ -8,16 +8,13 @@
   justify-content: center;
   background-repeat: no-repeat;
   background-size: cover;
-  /* По замовчуванню центруємо, але для мобілок змістимо вправо */
   background-position: center;
   transition: background-image 0.3s ease;
 }
 
-/* Налаштування для мобільних пристроїв (планшети та телефони) */
 @media screen and (max-width: 1024px) {
   .course-hero {
     min-height: 400px;
-    /* Зміщуємо фон вправо, щоб було видно декор (напис Brows тощо) */
     background-position: 75% center;
   }
 }
@@ -29,8 +26,6 @@
     padding-bottom: var(--space-xl);
   }
 }
-
-/* Окремі фони з градієнтами */
 
 /* 1. Brow Lash */
 .brow-lash {
@@ -67,7 +62,6 @@
     url('/images_fon/makeup-express.webp');
 }
 
-/* Спеціальний градієнт для маленьких екранів, щоб текст точно читався */
 @media screen and (max-width: 767px) {
   .brow-lash,
   .brow-master,
@@ -77,10 +71,8 @@
     background-image:
       linear-gradient(to bottom, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.7) 100%),
       url('/images_fon/brow-master.webp') !important;
-    /* Приклад, картинка залишиться своя з класів вище */
   }
 
-  /* Окремо прописуємо url для кожного класу на мобільці, щоб градієнт був to bottom */
   .brow-lash {
     background-image:
       linear-gradient(to bottom, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.5) 100%),

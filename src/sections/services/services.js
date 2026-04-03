@@ -18,7 +18,7 @@ export function renderServices() {
                 src="images_price/makeup.webp"
                 width="300"
                 height="260"
-                alt="Girl with makeup"
+                alt="Результат професійного макіяжу"
                 loading="lazy"
               />
             </div>
@@ -37,7 +37,7 @@ export function renderServices() {
                 src="images_price/brows.webp"
                 width="300"
                 height="260"
-                alt="Eyebrows"
+                alt="Професійне моделювання та фарбування брів"
               />
             </div>
           </li>
@@ -55,7 +55,7 @@ export function renderServices() {
                 src="images_price/lami.webp"
                 width="300"
                 height="260"
-                alt="Eyelash and eyebrow lamination"
+                alt="Результат ламінування вій та брів"
               />
             </div>
           </li>
