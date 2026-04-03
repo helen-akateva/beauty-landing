@@ -67,7 +67,7 @@
   justify-content: center;
   gap: 12px;
   background-color: var(--color-accent-gold);
-  color: var(--color-white);
+  color: var(--color-header-bg);
   padding: 16px 32px;
   border-radius: var(--radius-sm);
   font-family: var(--font-main);

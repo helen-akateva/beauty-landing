@@ -14,7 +14,8 @@ export function renderServices() {
               </ul>
               <img
                 class="img-card"
-                srcset="images_price/makeup.webp 1x, images_price/makeup2x.webp 2x"
+                srcset="images_price/makeup.webp 400w, images_price/makeup2x.webp 800w"
+                sizes="(max-width: 767px) 100vw, 300px"
                 src="images_price/makeup.webp"
                 width="300"
                 height="260"
@@ -33,11 +34,13 @@ export function renderServices() {
               </ul>
               <img
                 class="img-card"
-                srcset="images_price/brows.webp 1x, images_price/brows2x.webp 2x"
+                srcset="images_price/brows.webp 400w, images_price/brows2x.webp 800w"
+                sizes="(max-width: 767px) 100vw, 300px"
                 src="images_price/brows.webp"
                 width="300"
                 height="260"
                 alt="Професійне моделювання та фарбування брів"
+                loading="lazy"
               />
             </div>
           </li>
@@ -51,11 +54,13 @@ export function renderServices() {
               </ul>
               <img
                 class="img-card"
-                srcset="images_price/lami.webp 1x, images_price/lami2x.webp 2x"
+                srcset="images_price/lami.webp 400w, images_price/lami2x.webp 800w"
+                sizes="(max-width: 767px) 100vw, 300px"
                 src="images_price/lami.webp"
                 width="300"
                 height="260"
                 alt="Результат ламінування вій та брів"
+                loading="lazy"
               />
             </div>
           </li>

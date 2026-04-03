@@ -64,39 +64,52 @@ export function renderReviews() {
 }
 
 export function initReviews() {
-  new Swiper('.reviews-swiper', {
-    modules: [EffectCoverflow, Navigation, Pagination, A11y],
-    effect: 'coverflow',
-    grabCursor: true,
-    centeredSlides: true,
-    loop: true,
-    slidesPerView: 1,
-    breakpoints: {
-      768: {
-        slidesPerView: 1.3,
-      },
-      1280: {
-        slidesPerView: 1.5,
-      },
+  const node = document.querySelector('.reviews-swiper');
+  if (!node) return;
+
+  const observer = new IntersectionObserver(
+    (entries, obs) => {
+      if (entries[0].isIntersecting) {
+        new Swiper('.reviews-swiper', {
+          modules: [EffectCoverflow, Navigation, Pagination, A11y],
+          effect: 'coverflow',
+          grabCursor: true,
+          centeredSlides: true,
+          loop: true,
+          slidesPerView: 1,
+          breakpoints: {
+            768: {
+              slidesPerView: 1.3,
+            },
+            1280: {
+              slidesPerView: 1.5,
+            },
+          },
+          coverflowEffect: {
+            rotate: 20,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+          },
+          a11y: {
+            prevSlideMessage: 'Попередній відгук',
+            nextSlideMessage: 'Наступний відгук',
+          },
+          pagination: {
+            el: '.reviews-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.reviews-btn--next',
+            prevEl: '.reviews-btn--prev',
+          },
+        });
+        obs.disconnect();
+      }
     },
-    coverflowEffect: {
-      rotate: 20,
-      stretch: 0,
-      depth: 100,
-      modifier: 1,
-      slideShadows: true,
-    },
-    a11y: {
-      prevSlideMessage: 'Попередній відгук',
-      nextSlideMessage: 'Наступний відгук',
-    },
-    pagination: {
-      el: '.reviews-pagination',
-      clickable: true,
-    },
-    navigation: {
-      nextEl: '.reviews-btn--next',
-      prevEl: '.reviews-btn--prev',
-    },
-  });
+    { rootMargin: '800px' }
+  );
+
+  observer.observe(node);
 }

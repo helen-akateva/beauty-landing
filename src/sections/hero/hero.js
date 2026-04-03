@@ -16,6 +16,8 @@ export function renderHero() {
             src="image_hero/heromobile.webp"
             srcset="image_hero/heromobile.webp 1x, image_hero/heromobile@2x.webp 2x"
             alt="Оксана Лихацька — візажист"
+            width="343"
+            height="428"
             fetchpriority="high"
           />
         </picture>

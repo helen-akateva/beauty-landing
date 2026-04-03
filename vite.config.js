@@ -1,7 +1,11 @@
 import { resolve } from 'path';
 import { defineConfig } from 'vite';
+import ViteWebfontDownload from 'vite-plugin-webfont-dl';
 
 export default defineConfig({
+  plugins: [
+    ViteWebfontDownload(),
+  ],
   build: {
     rollupOptions: {
       input: {

@@ -74,12 +74,12 @@
 
 .badge-online {
   background: var(--color-accent-gold);
-  color: var(--color-white);
+  color: var(--color-header-bg);
 }
 
 .badge-offline {
   background: var(--color-primary-hover);
-  color: var(--color-white);
+  color: var(--color-header-bg);
 }
 
 /* --- Card text --- */
@@ -149,7 +149,7 @@
   justify-content: center;
   gap: 8px;
   background-color: var(--color-accent-gold);
-  color: var(--color-white);
+  color: var(--color-header-bg);
   padding: 12px 24px;
   border-radius: var(--radius-sm);
   font-weight: 600;

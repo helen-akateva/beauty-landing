@@ -110,7 +110,7 @@
     var(--color-accent-gold),
     var(--color-accent-gold-hover)
   );
-  color: var(--color-white);
+  color: var(--color-header-bg);
   padding: 14px 36px;
   border-radius: 40px;
   text-decoration: none;

@@ -55,7 +55,7 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   background: var(--color-primary-hover);
-  color: var(--color-white);
+  color: var(--color-header-bg);
   flex-shrink: 0;
   white-space: nowrap;
 }
@@ -119,7 +119,7 @@
   width: auto;
   white-space: nowrap;
   margin: 0 auto;
-  color: var(--color-white);
+  color: var(--color-header-bg);
 }
 
 .master-contact .hero-btn svg,

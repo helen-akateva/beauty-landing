@@ -35,7 +35,7 @@ export function renderHeader() {
         </button>
       </nav>
 
-      <div class="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu" aria-hidden="true" inert>
         <button class="mobile-menu-close" aria-label="Закрити меню">
           <svg class="mobile-menu-icon" width="18" height="18">
             <use href="icons.svg#icon-x-close"></use>
@@ -82,6 +82,11 @@ export function initHeader() {
     mobileMenu.classList.toggle('is-open');
     const isOpen = mobileMenu.classList.contains('is-open');
     mobileMenu.setAttribute('aria-hidden', !isOpen);
+    if (isOpen) {
+      mobileMenu.removeAttribute('inert');
+    } else {
+      mobileMenu.setAttribute('inert', '');
+    }
   };
 
   navList?.addEventListener('click', event => {

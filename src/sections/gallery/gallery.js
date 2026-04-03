@@ -68,39 +68,52 @@ export function renderGallery() {
 }
 
 export function initGallery() {
-  new Swiper('.gallery-swiper', {
-    modules: [EffectCoverflow, Navigation, Pagination, A11y],
-    effect: 'coverflow',
-    grabCursor: true,
-    centeredSlides: true,
-    loop: true,
-    slidesPerView: 1,
-    breakpoints: {
-      768: {
-        slidesPerView: 2,
-      },
-      1280: {
-        slidesPerView: 3,
-      },
+  const node = document.querySelector('.gallery-swiper');
+  if (!node) return;
+
+  const observer = new IntersectionObserver(
+    (entries, obs) => {
+      if (entries[0].isIntersecting) {
+        new Swiper('.gallery-swiper', {
+          modules: [EffectCoverflow, Navigation, Pagination, A11y],
+          effect: 'coverflow',
+          grabCursor: true,
+          centeredSlides: true,
+          loop: true,
+          slidesPerView: 1,
+          breakpoints: {
+            768: {
+              slidesPerView: 2,
+            },
+            1280: {
+              slidesPerView: 3,
+            },
+          },
+          coverflowEffect: {
+            rotate: 30,
+            stretch: 0,
+            depth: 120,
+            modifier: 1,
+            slideShadows: true,
+          },
+          a11y: {
+            prevSlideMessage: 'Попередній слайд',
+            nextSlideMessage: 'Наступний слайд',
+          },
+          pagination: {
+            el: '.gallery-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.gallery-btn--next',
+            prevEl: '.gallery-btn--prev',
+          },
+        });
+        obs.disconnect();
+      }
     },
-    coverflowEffect: {
-      rotate: 30,
-      stretch: 0,
-      depth: 120,
-      modifier: 1,
-      slideShadows: true,
-    },
-    a11y: {
-      prevSlideMessage: 'Попередній слайд',
-      nextSlideMessage: 'Наступний слайд',
-    },
-    pagination: {
-      el: '.gallery-pagination',
-      clickable: true,
-    },
-    navigation: {
-      nextEl: '.gallery-btn--next',
-      prevEl: '.gallery-btn--prev',
-    },
-  });
+    { rootMargin: '800px' }
+  );
+
+  observer.observe(node);
 }
